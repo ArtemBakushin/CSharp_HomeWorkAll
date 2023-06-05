@@ -1,5 +1,8 @@
 ﻿  // Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
   // Напишите программу, которая покажет количество чётных чисел в массиве.
+Console.Write("Введите длину массива: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
 int[] GetArray(int size, int start, int finish)
 {
     int[] resultArray = new int[size];
@@ -12,7 +15,7 @@ int[] GetArray(int size, int start, int finish)
 
 
 
-int[] array = GetArray(12, 100, 1000);
+int[] array = GetArray(size, 100, 1000);
 Console.WriteLine($"В массиве:  [ {string.Join("; ", array)} ]");
 
 int count = 0;
@@ -21,4 +24,4 @@ for(int x = 0; x < array.Length ; x++)
     if ( array[x] % 2 == 0)
     count++;
 }
-Console.WriteLine($"{count} положительных чисел");
+Console.WriteLine($"{count} четных чисел");
