@@ -1,4 +1,7 @@
-﻿int [] GetArray (int size , int start , int finish)
+﻿Console.Write("Введите длину массива: ");
+int size =Convert.ToInt32(Console.ReadLine());
+
+int [] GetArray (int size , int start , int finish)
 {
     int [] resultArrray = new int [size];
     for (int i = 0 ; i < resultArrray.Length ; i++)
@@ -7,7 +10,7 @@
     }
     return resultArrray;
 }
-int [] array = GetArray(4 ,-100 , 100);
+int [] array = GetArray(size ,-100 , 100);
 Console.WriteLine($"В массиве: [ {String.Join("; ", array)}]");
 
 int numbSum = 0 ;
